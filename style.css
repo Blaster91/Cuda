@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    margin: 0;
+}
+
+#entete{
+    background-color:#87509c;
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+#nav_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav_menu ul{
+    display: flex;
+    list-style: none;
+}
+#nav_menu a{
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+#nav_menu a:hover{
+    background-color: #643a79
+}
