@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
 ul{
     margin: 0;
 }
@@ -10,7 +14,7 @@ ul{
     background-color:#87509c;
     position: fixed;
     width: 100%;
-    height: 130px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
 }
@@ -33,4 +37,39 @@ ul{
 }
 #nav_menu a:hover{
     background-color: #643a79
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Welcome >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+#Welcome{
+    background-color: #87509c;
+    height: 595px;
+    width: 100%;
+}
+#container-welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+#button_welcome{
+    margin-top: 55px;
+    height: 70px;
+    width: 290px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 4px solid #c86a40;
+    background-color: #eb7d4b;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: 0.3s all;
+}
+#button_welcome:hover{
+    border-bottom: 4px solid #eb7d4b;
+    background-color:#c86a40;
+    box-shadow: 0px 0px 1px 1px rgb(65, 65, 65);
 }
