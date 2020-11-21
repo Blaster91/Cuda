@@ -30,6 +30,7 @@ a{
     height: 150px;
     display: flex;
     justify-content: space-between;
+    z-index: 999;
 }
 #nav_menu{
     display: flex;
@@ -126,6 +127,7 @@ a{
     text-align: center;
     font-size: 15px;
     margin-bottom: 75px;
+    font-weight: 400;
 }
 #container_services h3{
     color: white;
@@ -162,6 +164,7 @@ a{
 }
 #container_team p{
     color: #3c4761;
+    font-weight: 600;
 }
 .img_team{
     height: 200px;
@@ -173,11 +176,7 @@ a{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    transition: 0.3s all;
     padding: 5px;
-}
-.content_team:hover{
-    box-shadow: 0px 0px 2px 4px #eaeaea;
 }
 .content_team h4{
     font-size: 20px;
@@ -228,11 +227,63 @@ a{
     width: 100%;
     background-color: #fff;
 }
+#container_skills{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#container_skills h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3c4761;
+}
+#container_skills p{
+    text-align: center;
+    color: #3c4761;
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+.content_skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.content_skills h4{
+    text-transform: uppercase;
+    color: #3c4761;
+    font-weight: bold;
+}
+div.round{
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: 0.5s all;
+}
+div.round input {
+    position: absolute;
+    top: 65px;
+    left: 47px;
+    font-size: 46px;
+    text-align: center;
+    width: 113px;
+    border: none;
+    background: none;
+    outline: none;
+}
+div.round canvas{
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<< portfolio >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #portfolio{
     height: 1420px;
     width: 100%;
-    background-color: #ffcc99;
+    background-color: #ffdd99;
 }
 /*<<<<<<<<<<<<<<<<<<<<<<<< Testimonials >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #testimonials{
