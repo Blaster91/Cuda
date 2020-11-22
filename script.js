@@ -1,3 +1,27 @@
+
+
+function focusInput(id){
+    let labelElt = document.getElementById("lb_" + id);
+    let inputNameElt = document.getElementById(id);
+    labelElt.classList.remove("lb_animation_down");
+    labelElt.classList.add("lb_animation_up");
+}
+
+function onblurInput(id){
+    let labelElt = document.getElementById("lb_" + id);
+    let inputNameElt = document.getElementById(id);
+    if(inputNameElt.value == ""){
+        labelElt.classList.remove("lb_animation_up");
+        labelElt.classList.add("lb_animation_down");
+    }
+}
+
+
+
+
+
+
+
 /* >>>>>>>>>> SMOOTH SCROLL <<<<<<<<<< */
 $(document).ready(function(){
     $("a").on('click', function(event) {

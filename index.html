@@ -279,7 +279,7 @@
             <label id="lb_name" for="name"> 
               Your Name <span class="text-danger">*</span>
             </label>
-              <input id="name" type="text" name="name">
+              <input onblur='onblurInput("name")' onfocus='focusInput("name")' id="name" type="text" name="name">
           </div>
 
           
@@ -288,7 +288,7 @@
             <label id="lb_mail" for="mail"> 
               Your Email <span class="text-danger">*</span>
             </label>
-            <input id="mail" type="email" name="mail">
+            <input onblur='onblurInput("mail")' onfocus='focusInput("mail")' id="mail" type="email" name="mail">
           </div>
           
           
@@ -296,7 +296,7 @@
           <div class="w-100 position-relative mb-5">
             <label id="lb_message" for="message"> 
               Your Message <span class="text-danger">*</span> </label>
-            <textarea id="message" name="message" maxlength="1000"></textarea> 
+            <textarea onblur='onblurInput("message")' onfocus='focusInput("message")' id="message" name="message" maxlength="1000"></textarea> 
           </div>
             
           

@@ -448,6 +448,16 @@ div.round canvas{
     color: white;
     cursor: text;
     padding: 15px;
+    transition: 0.3s all;
+    top: 0;
+}
+.lb_animation_up{
+    animation:0.5s linear forwards;
+    animation-name: lb_animation_up;
+}
+.lb_animation_down{
+    animation:0.5s linear forwards;
+    animation-name: lb_animation_down;
 }
 #name{
     height: 60px;
@@ -456,6 +466,8 @@ div.round canvas{
     border-radius: 4px;
     width: 100%;
     margin-bottom: 50px;
+    padding-left: 10px;
+    color: white;
 }
 #lb_mail{
     position: absolute;
@@ -516,4 +528,22 @@ footer{
 }
 #content_footer a:hover{
     color: #30bae7;
+}
+
+
+@keyframes lb_animation_up {
+    from{
+        top: 0;
+    }
+    to {
+     top: -50px;
+    }
+}
+@keyframes lb_animation_down {
+    from{
+        top: -50px;
+    }
+    to {
+     top: 0;
+    }
 }
