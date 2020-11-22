@@ -222,51 +222,105 @@
 
     <!-- <<<<<<<<<<<<<<< Testimonials >>>>>>>>>>>>> -->
     <section id="testimonials">
-      <div id="content_tiltle_testimonials">
-        <h2>what poeple say about us</h2>
-        <hr>
-        <p>Our clients love us!</p>
-      </div>
-      <div id="content_testimonials">
-        <div class="items_testimonials">
-          <img src="img/iman.png" alt="photo de Chanel Iman">
-          <div class="content_text_testimonials">
-            <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
-            <h4>Chanel Iman</h4>
-            <span>CEO of Pinterest</span>
-          </div>
+      <div class="container d-flex justify-content-center flex-column align-content-center align-items-center h-100">
+        <div id="content_tiltle_testimonials">
+          <h2>what poeple say about us</h2>
+          <hr>
+          <p>Our clients love us!</p>
         </div>
-        <div class="items_testimonials">
-          <img src="img/iman.png" alt="photo de Chanel Iman">
-          <div class="content_text_testimonials">
-            <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
-            <h4>Chanel Iman</h4>
-            <span>CEO of Pinterest</span>
+        <div id="content_testimonials">
+          <div class="items_testimonials">
+            <img src="img/iman.png" alt="photo de Chanel Iman">
+            <div class="content_text_testimonials">
+              <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
+              <h4>Chanel Iman</h4>
+              <span>CEO of Pinterest</span>
+            </div>
           </div>
-        </div>
-        <div class="items_testimonials">
-          <img src="img/iman.png" alt="photo de Chanel Iman">
-          <div class="content_text_testimonials">
-            <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
-            <h4>Chanel Iman</h4>
-            <span>CEO of Pinterest</span>
+          <div class="items_testimonials">
+            <img src="img/lima.png" alt="photo de Chanel Iman">
+            <div class="content_text_testimonials">
+              <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
+              <h4>adriana lima</h4>
+              <span>Founder of instagram</span>
+            </div>
           </div>
-        </div>
-        <div class="items_testimonials">
-          <img src="img/iman.png" alt="photo de Chanel Iman">
-          <div class="content_text_testimonials">
-            <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
-            <h4>Chanel Iman</h4>
-            <span>CEO of Pinterest</span>
+          <div class="items_testimonials">
+            <img src="img/hathaway2.png" alt="photo de Chanel Iman">
+            <div class="content_text_testimonials">
+              <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
+              <h4>anne hathaway</h4>
+              <span>Lead Designer at Behance</span>
+            </div>
+          </div>
+          <div class="items_testimonials">
+            <img src="img/stone.png" alt="photo de Chanel Iman">
+            <div class="content_text_testimonials">
+              <p>"Nullam dapibus blandit orci, viverra gravida dui iobortis eget. Maecenas fringilla urna eu nisl scelerisque."</p>
+              <h4>Emma stone</h4>
+              <span>Co-Founder of Shazam</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- <<<<<<<<<<<<<<< Get in touch >>>>>>>>>>>>> -->
-    <section id="get_in_touch"></section>
+    <section id="get_in_touch">
+      <div class="container d-flex justify-content-center flex-column align-content-center h-100">
+        <div class="content_title_contact">
+          <h2>get in touch</h2>
+          <hr>
+          <p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</p>
+        </div>
+        <form id="form_get_in_touch" action="form_traitement.php" method="post">
+          
+          <div class="position-relative mb-1" style="width: 48%;">
+            <label id="lb_name" for="name"> 
+              Your Name <span class="text-danger">*</span>
+            </label>
+              <input id="name" type="text" name="name">
+          </div>
 
-    <footer></footer>
+          
+          
+          <div class="position-relative mb-1" style="width: 48%;">
+            <label id="lb_mail" for="mail"> 
+              Your Email <span class="text-danger">*</span>
+            </label>
+            <input id="mail" type="email" name="mail">
+          </div>
+          
+          
+          
+          <div class="w-100 position-relative mb-5">
+            <label id="lb_message" for="message"> 
+              Your Message <span class="text-danger">*</span> </label>
+            <textarea id="message" name="message" maxlength="1000"></textarea> 
+          </div>
+            
+          
+          <div class="d-flex justify-content-center w-100">
+            <input id="send_form_contact" type="submit" value="SEND MESSAGE">
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- <<<<<<<<<<<<<<< FOOTER >>>>>>>>>>>>> -->
+    <footer>
+      <div class="container h-100">
+        <nav id="content_footer" class="d-flex w-100 justify-content-around h-100 align-content-center align-items-center">
+          <a href="" class="link_social_footer">Facebook</a>
+          <a href="" class="link_social_footer">Twitter</a>
+          <a href="" class="link_social_footer">Google+</a>
+          <a href="" class="link_social_footer">Linkedin</a>
+          <a href="" class="link_social_footer">Behance</a>
+          <a href="" class="link_social_footer">Dribble</a>
+          <a href="" class="link_social_footer">GitHub</a>
+        </nav>
+      </div>
+    </footer>
 
 
 

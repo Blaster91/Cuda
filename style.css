@@ -366,15 +366,154 @@ div.round canvas{
     width: 100%;
     background-color: #d74680;
 }
+#content_tiltle_testimonials{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+#content_tiltle_testimonials h2{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 70px;
+}
+#content_tiltle_testimonials p{
+    color: white;
+}
+#content_testimonials{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.items_testimonials{
+    width: 540px;
+    margin-bottom: 140px;
+    display: flex;
+}
+.items_testimonials img{
+    height: 95px;
+    width: 95px;
+    flex-shrink: 0;
+}
+.items_testimonials p{
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+}
+.items_testimonials h4{
+    color: white;
+    text-transform: uppercase;
+}
+.items_testimonials span{
+    color: #ffdd99;
+}
+.content_text_testimonials{
+    padding: 10px 100px 0 45px;
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<< Get in touch >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #get_in_touch{
     height: 820px;
     width: 100%;
     background-color: #3c5499;
 }
+.content_title_contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.content_title_contact h2{
+    color: white;
+    text-transform: uppercase;
+}
+.content_title_contact hr{
+    border-top: 4px solid #273a71 !important;
+}
+.content_title_contact p{
+    color: white;
+}
+#form_get_in_touch{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#lb_name{
+    position: absolute;
+    z-index: 109;
+    color: white;
+    cursor: text;
+    padding: 15px;
+}
+#name{
+    height: 60px;
+    background-color: #273a71;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+#lb_mail{
+    position: absolute;
+    z-index: 109;
+    color: white;
+    cursor: text;
+    padding: 15px;
+}
+#mail{
+    height: 60px;
+    background-color: #273a71;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+#lb_message{
+    position: absolute;
+    z-index: 109;
+    color: white;
+    cursor: text;
+    padding: 15px;
+}
+#message{
+    height: 100%;
+    background-color: #273a71;
+    border: none;
+    border-radius: 4px;
+    min-height: 200px!important;
+    width: 100%;
+    margin-bottom: 60px;
+}
+#send_form_contact{
+    position: relative;
+    width: 290px;
+    height: 70px;
+    border: none;
+    border-bottom: 4px solid #299ec5;
+    border-radius: 4px;
+    background-color: #30bae7;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s all;
+}
+#send_form_contact:hover{
+    background-color: #299ec5;
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 footer{
     height: 110px;
     width: 100%;
     background-color: #344b8e;
+}
+#content_footer a{
+    color: white;
+    font-weight: bold;
+    transition: 0.3s all;
+}
+#content_footer a:hover{
+    color: #30bae7;
 }
