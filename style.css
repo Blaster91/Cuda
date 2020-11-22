@@ -1,3 +1,4 @@
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< reset CSS >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 *{
     padding: 0;
@@ -285,6 +286,7 @@ div.round canvas{
     height: 1420px;
     width: 100%;
     background-color: #ffdd99;
+    position: relative;
 }
 #content_title_portfolio{
     display: flex;
@@ -294,6 +296,8 @@ div.round canvas{
     align-items: center;
     margin-bottom: 35px;
     width: 500px;
+    position: absolute;
+    top: 80px;
 }
 #content_title_portfolio h2{
     text-transform: uppercase;
@@ -325,6 +329,9 @@ div.round canvas{
 #link_portfolio button:hover{
     background-color: #fff;
 }
+#content_portfolio{
+    margin-top: 130px;
+}
 #content_items_portfolio{
     display: flex;
     justify-content: center;
@@ -338,6 +345,9 @@ div.round canvas{
 }
 .items_portfolio{
     margin-bottom: 60px;
+    display: block;
+    animation: 1.5s ease-in-out forwards;
+    animation-name: view_items_portfolio;
 }
 .items_portfolio h4{
     text-align: center;
@@ -359,6 +369,10 @@ div.round canvas{
 }
 #button_load_projects:hover{
     background-color:  #14a58c;
+}
+.animation_delete_items_portfolio{
+    animation:0.5s ease-in-out forwards;
+    animation-name: delete_items_portfolio;
 }
 /*<<<<<<<<<<<<<<<<<<<<<<<< Testimonials >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #testimonials{
@@ -483,6 +497,8 @@ div.round canvas{
     border-radius: 4px;
     width: 100%;
     margin-bottom: 50px;
+    padding-left: 10px;
+    color: white;
 }
 #lb_message{
     position: absolute;
@@ -499,6 +515,8 @@ div.round canvas{
     min-height: 200px!important;
     width: 100%;
     margin-bottom: 60px;
+    padding-left: 10px;
+    color: white;
 }
 #send_form_contact{
     position: relative;
@@ -545,5 +563,35 @@ footer{
     }
     to {
      top: 0;
+    }
+}
+@keyframes delete_items_portfolio {
+        0%{
+            visibility: visible;
+            opacity: 1;
+        }50%{
+            transform: scale(0);
+        }
+    100%{
+        
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+}
+@keyframes view_items_portfolio {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }90%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 5;
     }
 }

@@ -1,4 +1,42 @@
 
+function view_all_items(){
+    let allElt = document.querySelectorAll(".items_portfolio");
+    allElt.forEach(element => {
+        element.classList.remove("animation_delete_items_portfolio");
+    });
+};
+
+function hidde_apps_icons(){
+    let allElt = document.querySelectorAll(".items_portfolio");
+    allElt.forEach(element => {
+        element.classList.remove("animation_delete_items_portfolio");
+    });
+    allElt = document.querySelectorAll("#ui_item, #blog_item");
+    allElt.forEach(element => {
+        element.classList.add("animation_delete_items_portfolio");
+    });
+}
+function hidde_mock_up_icons(){
+    let allElt = document.querySelectorAll(".items_portfolio");
+    allElt.forEach(element => {
+        element.classList.remove("animation_delete_items_portfolio");
+    });
+    allElt = document.querySelectorAll("#mock-up_item, #blog_item");
+    allElt.forEach(element => {
+        element.classList.add("animation_delete_items_portfolio");
+    });
+}
+
+function hidde_mock_up_app_ui(){
+    let allElt = document.querySelectorAll(".items_portfolio");
+    allElt.forEach(element => {
+        element.classList.remove("animation_delete_items_portfolio");
+    });
+    allElt = document.querySelectorAll("#mock-up_item, #app_item, #ui_item");
+    allElt.forEach(element => {
+        element.classList.add("animation_delete_items_portfolio");
+    });
+}
 
 function focusInput(id){
     let labelElt = document.getElementById("lb_" + id);
@@ -15,35 +53,6 @@ function onblurInput(id){
         labelElt.classList.add("lb_animation_down");
     }
 }
-
-
-
-
-
-
-
-/* >>>>>>>>>> SMOOTH SCROLL <<<<<<<<<< */
-$(document).ready(function(){
-    $("a").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            if ((hash.includes("carousel") || hash.includes("Carousel")) == false) {
-              $('html, body').animate({
-                  scrollTop: ($(hash).offset().top - $('#menu').innerHeight())
-              }, 800, function(){
-                  history.pushState(null,null,hash);
-              });
-            }
-        }
-    });
-});
-
-
-
-
-
-
 
 (function($){
 

@@ -15,11 +15,11 @@
       <nav id="nav_menu" class="container">
         <img src="img/logo.png" alt="">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html#welcome">Home</a></li>
+          <li><a href="index.html#services">About</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#testimonials">Blog</a></li>
+          <li><a href="#get_in_touch">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -183,35 +183,36 @@
 
     <!-- <<<<<<<<<<<<<<<< Portfolio >>>>>>>>>>>>>>> -->
     <section id="portfolio">
-      <div class="container d-flex flex-column justify-content-center align-items-center align-content-center h-100">
+      <div class="position-relative container d-flex flex-column justify-content-center align-items-center align-content-center h-100">
         <div id="content_title_portfolio">
           <h2>our portfolio</h2>
           <hr>
           <p>Nesque porro quisqual est, qui dolorem ipsum quia dolor sit amet consectetur,  sipisci velit, sed quia non numquam</p>
+          <nav id="link_portfolio">
+            <button onclick="view_all_items()">all</button>
+            <button onclick="hidde_apps_icons()">web</button>
+            <button onclick="hidde_mock_up_icons()">apps</button>
+            <button onclick="hidde_mock_up_app_ui()">icons</button>
+          </nav>
         </div>
         <div id="content_portfolio">
-          <nav id="link_portfolio">
-            <button>all</button>
-            <button>web</button>
-            <button>apps</button>
-            <button>icons</button>
-          </nav>
+          
           <div id="content_items_portfolio">
-            <div class="items_portfolio">
+            <div id="mock-up_item" class="items_portfolio">
               <img src="img/isometric.png" alt="image d'un ordinateur qui montre un mock-up">
               <h4>isometric perspective mock-up</h4>
             </div>
-            <div class="items_portfolio">
+            <div id="app_item" class="items_portfolio">
               <img src="img/time.png" alt="image d'un ordinateur qui montre un site d'applications">
               <h4>time zone app ui</h4>
             </div>
-            <div class="items_portfolio">
+            <div id="ui_item" class="items_portfolio">
               <img src="img/blog.png" alt="image d'un ordinateur qui montre un blog">
               <h4>viro media player ui</h4>
             </div>
-            <div class="items_portfolio">
+            <div id="blog_item" class="items_portfolio">
               <img src="img/4.png" alt="image d'un ordinateur qui des icones">
-              <h4>isometric perspective mock-up</h4>
+              <h4>blog / magazine flat ui kit</h4>
             </div>
           </div>
           <div class="w-100 d-flex justify-content-center"><button id="button_load_projects"> load more projects</button></div>
