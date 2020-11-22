@@ -371,7 +371,7 @@ div.round canvas{
     background-color:  #14a58c;
 }
 .animation_delete_items_portfolio{
-    animation:0.5s ease-in-out forwards;
+    animation:0s ease-in-out forwards;
     animation-name: delete_items_portfolio;
 }
 /*<<<<<<<<<<<<<<<<<<<<<<<< Testimonials >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -569,8 +569,6 @@ footer{
         0%{
             visibility: visible;
             opacity: 1;
-        }50%{
-            transform: scale(0);
         }
     100%{
         
