@@ -1,4 +1,3 @@
-
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< reset CSS >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 *{
     padding: 0;
@@ -26,11 +25,10 @@ a{
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #entete{
     background-color:#87509c;
-    position: fixed;
     width: 100%;
     height: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 999;
 }
 #nav_menu{
@@ -54,11 +52,49 @@ a{
 #nav_menu a:hover{
     background-color: #643a79
 }
+#nav_menu_stiky{
+    position: fixed;
+    background-color:#87509c;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 1px #585858;
+}
+#nav_menu_stiky .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+#nav_menu_stiky ul{
+    display: flex;
+    list-style: none;
+}
+#nav_menu_stiky a{
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: 0.3s all;
+}
+#nav_menu_stiky a:hover{
+    background-color: #643a79
+}
+.sticky_view{
+    animation: viewFondu 1s ease-out;
+}
+.sticky_hidden{
+    visibility: hidden;
+    opacity: 0;
+}
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Welcome >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #welcome{
     background-color: #87509c;
-    height: 595px;
+    height: 445px;
     width: 100%;
 }
 #container-welcome{
@@ -547,7 +583,14 @@ footer{
 #content_footer a:hover{
     color: #30bae7;
 }
-
+@keyframes viewFondu {
+    from{
+        opacity: 0;
+    }
+    to {
+     opacity: 1;
+    }
+}
 
 @keyframes lb_animation_up {
     from{
@@ -592,4 +635,10 @@ footer{
     position: relative;
     z-index: 5;
     }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< RESPONSIVE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media screen and (max-width:768px){
+
 }

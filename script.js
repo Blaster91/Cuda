@@ -1,4 +1,39 @@
 
+// Sticky nav bar
+window.onscroll = function() {stickyFunction()};
+
+var navbar = document.getElementById("nav_menu_stiky");
+var navBarFix = document.getElementById("nav_menu");
+var contentElt = document.getElementsByTagName("footer");
+var sticky = navBarFix.offsetTop;
+console.log("navbar" + navBarFix.offsetTop);
+console.log("page" + window.pageYOffset);
+
+function stickyFunction() {
+  if (window.pageYOffset >= sticky+10) {
+    navbar.classList.add("sticky_view");
+    navbar.classList.remove("sticky_hidden");
+  } else {
+    navbar.classList.remove("sticky_view");
+    navbar.classList.add("sticky_hidden");
+  }
+}
+
+stickyFunction(); //load start
+
+// Open Curtain Menu 
+function openNav() {
+    document.getElementById("nav_menu_stiky").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("nav_menu_stiky").style.height = "0%";
+  }
+
+
+
+
+
 function view_all_items(){
     let allElt = document.querySelectorAll(".items_portfolio");
     allElt.forEach(element => {
