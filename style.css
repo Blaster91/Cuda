@@ -79,6 +79,11 @@ a{
     text-transform: uppercase;
     border-radius: 4px;
     transition: 0.3s all;
+
+}
+#nav_menu .link_menu_responsive{
+    border-radius: 4px;
+    transition: 0.3s all;
 }
 #nav_menu_stiky a:hover{
     background-color: #643a79
@@ -89,6 +94,28 @@ a{
 .sticky_hidden{
     visibility: hidden;
     opacity: 0;
+}
+.menu-burger{
+    width: 150px;
+    border: 1px solid #565656;
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    top: 33px;
+    background-color: #87509c;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+.menu-burger li{
+    border-bottom: 1px solid #7f5390;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+.menu-burger .link_menu_burger{
+    margin: 0 !important;
+    user-select: none;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Welcome >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -639,6 +666,6 @@ footer{
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< RESPONSIVE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 991px){
 
 }

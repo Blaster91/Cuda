@@ -1,21 +1,109 @@
 
+let linkNav = document.querySelectorAll('.link_menu');
+let linkNav2 = document.querySelectorAll('.link_menu2');
+
+// Afficher/effacer les liens du menu
+function viewLinkMenu(){
+    linkNav.forEach(elt => {
+        elt.style.display = "flex";
+    })
+    linkNav2.forEach(elt =>{
+        elt.style.display = "flex";
+    });
+}
+function removeLinkMenu(){
+    linkNav.forEach(elt => {
+        elt.style.display = "none";
+    })
+    linkNav2.forEach(elt =>{
+        elt.style.display = "none";
+    });
+}
+
+// deplacer les lien dans le menu burger
+function moveEltToMenuBurger(){
+    let menuBurger = document.querySelectorAll('.menu-burger');
+    menuBurger.forEach(element => {
+        ulEltMenu = element;
+        linkNav.forEach(elt => {
+            let listeLink = document.createElement("li");
+            listeLink.classList.add("w-100");
+            copyElt = elt.cloneNode(true);
+            copyElt.style.display = "block";
+            copyElt.classList.add("link_menu_burger");
+            copyElt.classList.add("w-100");
+            copyElt.classList.add("text-center");
+            copyElt.classList.remove("link_menu");
+            listeLink.append(copyElt);
+            ulEltMenu.append(listeLink);
+        }); 
+    });
+};
+
+// afficher le menu burger
+function viewMenuBurger(){
+    moveEltToMenuBurger();
+    let menuBurger = document.querySelectorAll('.menu-burger');
+    let buttonLinkMenuBurger = document.querySelectorAll('.link_menu_responsive');
+    buttonLinkMenuBurger.forEach(element => {
+        element.addEventListener("click", function(e){
+            e.preventDefault();
+            menuBurger.forEach(linkElt => {
+                linkElt.classList.toggle("d-none");
+            })
+        })
+    })
+        
+};
+
+
+// fonction qui gére l'affichage du menu en fonction de la taille de la fenêtre
+function resize(){ 
+    let hauteur = window.innerHeight;
+    let largeur = window.innerWidth;
+    let buttonLinkMenuBurger = document.querySelectorAll('.link_menu_responsive');
+    let menuBurgerAll = document.querySelectorAll(".menu-burger");
+    if (largeur > 992){
+        buttonLinkMenuBurger.forEach(e => {
+            e.classList.add("d-none");
+        })
+        viewLinkMenu();
+        menuBurgerAll.forEach(element => {
+            element.style.display = "none";
+        });
+    }
+    else if(largeur < 992){
+        buttonLinkMenuBurger.forEach(e => {
+            e.classList.remove("d-none");
+        })
+        
+        removeLinkMenu();
+        menuBurgerAll.forEach(element => {
+            element.style.display = "block";
+        });
+    }
+}
+
+
+
 // Sticky nav bar
-window.onscroll = function() {stickyFunction()};
+window.onscroll = function(){stickyFunction()};
 
 var navbar = document.getElementById("nav_menu_stiky");
 var navBarFix = document.getElementById("nav_menu");
 var contentElt = document.getElementsByTagName("footer");
 var sticky = navBarFix.offsetTop;
-console.log("navbar" + navBarFix.offsetTop);
-console.log("page" + window.pageYOffset);
+var menuBurgerFix = document.getElementById("menu-burger-fix");
 
 function stickyFunction() {
   if (window.pageYOffset >= sticky+10) {
     navbar.classList.add("sticky_view");
     navbar.classList.remove("sticky_hidden");
+    menuBurgerFix.classList.add("d-none");
   } else {
     navbar.classList.remove("sticky_view");
     navbar.classList.add("sticky_hidden");
+    menuBurgerFix.classList.remove("d-none");
   }
 }
 
@@ -164,3 +252,7 @@ function onblurInput(id){
         })
     })
 })(jQuery);
+
+viewMenuBurger();
+resize();
+window.onresize = resize;
