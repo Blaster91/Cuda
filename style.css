@@ -234,6 +234,9 @@ a{
     color: #3c4761;
     font-weight: 600;
 }
+#container_team > p{
+    text-align: center;
+}
 .img_team{
     height: 200px;
     width: 200px;
@@ -411,9 +414,12 @@ div.round canvas{
 }
 .items_portfolio{
     margin-bottom: 60px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     animation: 1.5s ease-in-out forwards;
     animation-name: view_items_portfolio;
+    justify-content: center;
+    align-items: center;
 }
 .items_portfolio h4{
     text-align: center;
@@ -712,6 +718,9 @@ footer{
         height: 100%;
         padding: 50px 0;
     }
+    .content_team{
+        padding: 15px;
+    }
     #container_team p{
         max-width: 500px;
     }
@@ -728,6 +737,9 @@ footer{
     }
     #container_services > div{
         max-width: 500px;
+    }
+    #container_services p {
+        margin-bottom: 10px;
     }
 }
 @media screen and (max-width: 591px){
