@@ -54,6 +54,7 @@ a{
 }
 #nav_menu_stiky{
     position: fixed;
+    z-index: 999;
     background-color:#87509c;
     width: 100%;
     display: flex;
@@ -186,6 +187,7 @@ a{
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: bold;
+    text-align: center;
 }
 #container_services p{
     color: white;
@@ -226,6 +228,7 @@ a{
     color: #3c4761;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 }
 #container_team p{
     color: #3c4761;
@@ -665,7 +668,101 @@ footer{
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< RESPONSIVE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media screen and (max-width: 1268px){
+    #portfolio{
+        height: 100%;
+        padding: 50px 0;
+    }
+    #content_title_portfolio{
+        position: initial;
+        width: 100%;
+    }
+    #content_portfolio{
+        margin-top: 0;
+    }
+    #testimonials {
+        height: 100%;
+        padding: 50px 0;
+    }
+    .items_testimonials{
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    #content_tiltle_testimonials h2 {
+        margin-top: 15px;
+        text-align: center;
+    }
+    #content_items_portfolio img {
+        height: 250px;
+        width: 441px;
+    }
+    #link_portfolio{
+        flex-wrap: wrap;
+    }
+    #link_portfolio button{
+        margin-top: 10px;
+    }
+}
 
 @media screen and (max-width: 991px){
-
+    #container_team > div{
+        flex-direction: column;
+    }
+    #team{
+        height: 100%;
+        padding: 50px 0;
+    }
+    #container_team p{
+        max-width: 500px;
+    }
+    #skills{
+        height: 100%;
+        padding: 50px 0;
+    }
+    #services {
+        height: 100%;
+        padding: 50px 20px;
+    }
+    #container_services > div{
+        flex-direction: column;
+    }
+    #container_services > div{
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 591px){
+    #content_items_portfolio img {
+        height: 200px;
+        width: 353px;
+    }
+    #content_footer{
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    footer {
+        height: 100%;
+        padding: 10px 0;
+    }
+    .link_social_footer{
+        margin-right: 15px;
+    }
+    #container_skills > div{
+        justify-content: center!important;
+    }
+    .content_skills{
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 390px){
+    #content_items_portfolio img {
+        height: 150px;
+        width: 265px;
+    }
+    #button_welcome{
+        width: 100%;
+    }
+    #button_load_projects{
+        width: 100%;
+    }
+    
 }

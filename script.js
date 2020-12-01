@@ -6,7 +6,7 @@ let linkNav2 = document.querySelectorAll('.link_menu2');
 function viewLinkMenu(){
     linkNav.forEach(elt => {
         elt.style.display = "flex";
-    })
+    });
     linkNav2.forEach(elt =>{
         elt.style.display = "flex";
     });
@@ -14,7 +14,7 @@ function viewLinkMenu(){
 function removeLinkMenu(){
     linkNav.forEach(elt => {
         elt.style.display = "none";
-    })
+    });
     linkNav2.forEach(elt =>{
         elt.style.display = "none";
     });
@@ -50,9 +50,9 @@ function viewMenuBurger(){
             e.preventDefault();
             menuBurger.forEach(linkElt => {
                 linkElt.classList.toggle("d-none");
-            })
-        })
-    })
+            });
+        });
+    });
         
 };
 
@@ -105,18 +105,15 @@ function stickyFunction() {
     navbar.classList.add("sticky_hidden");
     menuBurgerFix.classList.remove("d-none");
   }
-}
-
-stickyFunction(); //load start
-
+};
 // Open Curtain Menu 
 function openNav() {
     document.getElementById("nav_menu_stiky").style.height = "100%";
-  }
+};
   
-  function closeNav() {
-    document.getElementById("nav_menu_stiky").style.height = "0%";
-  }
+function closeNav() {
+document.getElementById("nav_menu_stiky").style.height = "0%";
+};
 
 
 
@@ -138,7 +135,7 @@ function hidde_apps_icons(){
     allElt.forEach(element => {
         element.classList.add("animation_delete_items_portfolio");
     });
-}
+};
 function hidde_mock_up_icons(){
     let allElt = document.querySelectorAll(".items_portfolio");
     allElt.forEach(element => {
@@ -148,7 +145,7 @@ function hidde_mock_up_icons(){
     allElt.forEach(element => {
         element.classList.add("animation_delete_items_portfolio");
     });
-}
+};
 
 function hidde_mock_up_app_ui(){
     let allElt = document.querySelectorAll(".items_portfolio");
@@ -159,14 +156,14 @@ function hidde_mock_up_app_ui(){
     allElt.forEach(element => {
         element.classList.add("animation_delete_items_portfolio");
     });
-}
+};
 
 function focusInput(id){
     let labelElt = document.getElementById("lb_" + id);
     let inputNameElt = document.getElementById(id);
     labelElt.classList.remove("lb_animation_down");
     labelElt.classList.add("lb_animation_up");
-}
+};
 
 function onblurInput(id){
     let labelElt = document.getElementById("lb_" + id);
@@ -174,8 +171,8 @@ function onblurInput(id){
     if(inputNameElt.value == ""){
         labelElt.classList.remove("lb_animation_up");
         labelElt.classList.add("lb_animation_down");
-    }
-}
+    };
+};
 
 (function($){
 
@@ -228,8 +225,8 @@ function onblurInput(id){
             }
             else{
                 return false;
-            }
-        }, 50)
+            };
+        }, 50);
         
         $div.mousedown(function(event){
             event.preventDefault();
@@ -237,7 +234,7 @@ function onblurInput(id){
                 var x = event.pageX - $div.offset().left - $div.width()/2;
                 var y = event.pageY - $div.offset().top - $div.height()/2;
                 var a = Math.atan2(x, -y) / (2*Math.PI);
-                if(a < 0){a+=1}
+                if(a < 0){a+=1};
                 ctx.clearRect(0,0,200,200);
                 ctx.beginPath();
                 ctx.arc(100,100,85,-1/2 * Math.PI, a*2*Math.PI - 1/2 * Math.PI);
@@ -253,6 +250,7 @@ function onblurInput(id){
     })
 })(jQuery);
 
-viewMenuBurger();
-resize();
-window.onresize = resize;
+stickyFunction(); // démarage de la sticky navbar
+viewMenuBurger(); // chargement des liens dans le menu burger
+resize(); // verification de la taille de l'écran
+window.onresize = resize; // on lance cette fonction à chaque fois que l'écran est redimenssionné
